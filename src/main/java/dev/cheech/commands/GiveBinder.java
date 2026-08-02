@@ -30,6 +30,9 @@ public class GiveBinder implements TabExecutor {
         // 2. Set Data
         meta.itemName(MiniMessage.miniMessage().deserialize("Card Binder"));
         meta.getPersistentDataContainer().set(key, PersistentDataType.STRING,"empty");
+        // 3. Apply model data
+        NamespacedKey modelKey = new NamespacedKey("chumcards","binder");
+        meta.setItemModel(modelKey);
         itemStack.setItemMeta(meta);
         Objects.requireNonNull(Bukkit.getPlayer(args[0])).getInventory().addItem(itemStack);
         return true;

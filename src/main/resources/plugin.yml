@@ -6,7 +6,7 @@ main: dev.cheech.MineCards
 api-version: '26.1.2'
 load: POSTWORLD
 
-authors: [ Frank D, Matt B ]
+authors: [Frank D]
 
 permissions:
   minepacks.admin:
