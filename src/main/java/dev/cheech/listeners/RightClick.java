@@ -50,6 +50,7 @@ public class RightClick implements Listener {
                     event.getPlayer().getWorld().dropItem(event.getPlayer().getLocation(),entry.getValue());
                 }
             }
+            return;
         }
         if (item.getItemMeta().getPersistentDataContainer().has(binderKey,PersistentDataType.STRING)){
             String value = item.getItemMeta().getPersistentDataContainer().get(binderKey, PersistentDataType.STRING);
