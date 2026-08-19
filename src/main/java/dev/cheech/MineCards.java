@@ -5,6 +5,7 @@ import dev.cheech.commands.*;
 import dev.cheech.listeners.CloseGui;
 import dev.cheech.listeners.GuiHandler;
 import dev.cheech.listeners.RightClick;
+import dev.cheech.resourcepack.GeneratePack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -25,6 +26,7 @@ public final class MineCards extends JavaPlugin {
         Objects.requireNonNull(getCommand("givebinder")).setExecutor(new GiveBinder());
         Objects.requireNonNull(getCommand("updateinv")).setExecutor(new UpdateInv());
         instance = this;
+        GeneratePack.init();
     }
 
     public static JavaPlugin getPluginObj(){
